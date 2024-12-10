@@ -29,7 +29,7 @@ body{
 }
 #logo-text{
     color:var(--font-normalDark);
-    margin-top: 0.8rem ;
+    margin-top: 24px ;
 }
 .logo{
     gap: 0.5rem;
