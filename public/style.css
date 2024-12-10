@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --font-normal:#908e91 ;
+    --background-color:#fff0e9 ;
+    --font-red:#ea5858 ;
+    --color-yellow:#fdcc63 ;
+    --font-normalDark:#3c3835 ;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+
+}
+body{
+    background-color: var(--background-color);
+
+}
+#root{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    
+}
+.navigation-bar {
+    margin: 0.5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+}
+#logo-text{
+    color:var(--font-normalDark);
+    margin-top: 0.8rem ;
+}
+.logo{
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: "Dancing Script", cursive;
+}
+.links-nav > ul {
+    font-size: 24px;
+    display: flex;
+    gap: 1.4rem;
+    list-style: none;
+}
+.links-nav > ul > li{
+    padding: 4px;
+}
+.links-nav > ul > li > a{
+    color: var(--font-normalDark);
+    text-decoration: none;
+}
+.login-signup > ul {
+    display:flex ;
+    list-style: none;
+    gap: 0.8rem;
+    font-size: 24px;
+}
+.login-signup > ul > li > a {
+    color: var(--font-normalDark);
+    text-decoration: none; 
+
+}
+.login-signup , .links-nav {
+    margin-top: 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+
+
+}#signup-btn{
+    border: 2px solid #ea5858;
+    border-radius: 30px;
+}
+#signup-btn > a {
+    
+    color: var(--font-red);
+}
+.login-signup > ul > li {
+    padding: 2px 15px;
+    
+}
+#login-btn > a{
+    color: var(--font-red);
+
+}
+#signup-btn:hover{
+background-color: var(--font-red);
+
+}
+#signup-btn:hover > a{
+    color:var(--background-color);
+}
+
