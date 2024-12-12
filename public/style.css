@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --font-normal:#908e91 ;
     --background-color:#fff0e9 ;
@@ -22,6 +24,13 @@ body{
     margin-right: 5rem;
     
 }
+@media (max-width: 768px) { 
+    #root {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+  }
+
 .navigation-bar {
     margin: 0.5rem 0rem;
     display: flex;
@@ -90,4 +99,29 @@ background-color: var(--font-red);
 #signup-btn:hover > a{
     color:var(--background-color);
 }
+.path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 3s linear forwards; animation-iteration-count: 1;animation-delay: 1s;}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.dashed{
+  stroke-dasharray: 5,12;
+  
+}
+#arrow{animation: arrow 2s linear forwards; opacity:0;}
+@keyframes arrow {
+  to {
+    opacity: 1;
+  }
+}
+.ifrm{border:none; width:100%;margin-top:50px;}
 
+.hero-text{
+    font-family: "Dancing Script", cursive;
+
+}
+.hero-para-text{
+    font-family: "Montserrat", sans-serif;
+
+}

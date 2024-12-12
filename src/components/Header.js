@@ -55,7 +55,7 @@ const Header = () => {
         <nav className="navigation-bar">
             <div className="logo">
                 <img style={{ width: "70px" }} src={logo} alt="company's logo" />
-                <span className="font-extrabold" id="logo-text">Khan's Kitchen</span>
+                <span className="font-extrabold hidden sl:block" id="logo-text">Khan's Kitchen</span>
             </div>
             <div className="hidden lg:block  links-nav">
                 <ul>
