@@ -81,7 +81,7 @@ const Header = () => {
             </div>
 
             <button
-                className="block lg:hidden transition ease-in-out duration-700 mb-3 -mr-8"
+                className="block lg:hidden transition ease-in-out duration-700 mb-3 -mr-4"
                 onClick={handleClick}
             >
                 {click ? (
