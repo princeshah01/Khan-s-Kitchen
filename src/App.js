@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import HeroCard from "./components/Hero-card";
 import BestDelivered from "./components/BestDelivered";
 import RegularMenu from "./components/RegularMenu";
+import Footer from "./components/Footer";
 // Pages
 const Menu = () => <div>Menu Page</div>;
 const Gallery = () => <div>Gallery Page</div>;
@@ -23,6 +24,7 @@ const App = () => (
             <HeroCard />
             <BestDelivered />
             <RegularMenu/>
+            
           </>
         }
       />
@@ -30,6 +32,7 @@ const App = () => (
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
     </Routes>
+    <Footer/>
   </Router>
 );
 
