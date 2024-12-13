@@ -1,26 +1,36 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
-import Hero from "./components/Hero.js";
-import HeroCard from "./components/Hero-card.js"
-
+import Hero from "./components/Hero";
+import HeroCard from "./components/Hero-card";
+import BestDelivered from "./components/BestDelivered";
+import RegularMenu from "./components/RegularMenu";
+// Pages
 const Menu = () => <div>Menu Page</div>;
-const Gallary = () => <div>Gallary Page</div>;
+const Gallery = () => <div>Gallery Page</div>;
 const About = () => <div>About Page</div>;
 
 const App = () => (
-<Router>
-<Header/>
+  <Router>
+    <Header />
 
-<Routes>
-    <Route path="/" element={<Hero />}/>
-    <Route path="/menu" element={<Menu />}/>
-    <Route path="/gallary" element={<Gallary />}/>
-    <Route path="/about" element={<About />}/>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Hero />
+            <HeroCard />
+            <BestDelivered />
+            <RegularMenu/>
+          </>
+        }
+      />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  </Router>
+);
 
-</Routes>
-<HeroCard/>
-
-</Router>
-) ;
-export default App ;
+export default App;

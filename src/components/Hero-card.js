@@ -20,7 +20,7 @@ return (
     </div>
   <div className="w-[70%]">
     <h2 className="font-bold text-xl mb-2">Fast Delivery</h2>
-    <p className="text-sm">The food will be Delivered to your Home within 30 min of your ordering .</p>
+    <p className="text-sm opacity-70">The food will be Delivered to your Home within 30 min of your ordering .</p>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ return (
     </div>
   <div className="w-[70%]">
     <h2 className="font-bold text-xl mb-2">Fresh Food</h2>
-    <p className="text-sm">Your food will be Delivered 100% Fresh to Your Home. We Do Not Deliver Stale Food.</p>
+    <p className="text-sm opacity-70">Your food will be Delivered 100% Fresh to Your Home. We Do Not Deliver Stale Food.</p>
   </div>
 </div>
 
@@ -51,7 +51,7 @@ return (
     </div>
   <div className="w-[70%]">
     <h2 className="font-bold text-xl mb-2">Free Delivery</h2>
-    <p className="text-sm">Your Food Delivery is Absolutely Free. No Cost Just Order And Enjoy .</p>
+    <p className="text-sm opacity-70">Your Food Delivery is Absolutely Free. No Cost Just Order And Enjoy .</p>
   </div>
 </div>
     
