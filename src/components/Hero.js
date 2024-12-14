@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 
 
 const TypingAnimation = () => {
-    // Create a ref to attach to the target element
-    const el = useRef(null); // Element to display the typing animation
-    const typed = useRef(null); // Instance of Typed.js
+    const el = useRef(null); 
+    const typed = useRef(null);
 
     useEffect(() => {
-        // Initialize Typed.js
         typed.current = new Typed(el.current, {
             strings: ["Welcome to Khan's Kitchen!", "Famous for its Biryani", "Order now!"], // Strings to type
             typeSpeed: 100,
@@ -20,7 +18,6 @@ const TypingAnimation = () => {
         });
 
         return () => {
-            // Destroy Typed.js instance during cleanup to prevent memory leaks
             typed.current.destroy();
         };
     }, []);
@@ -42,7 +39,6 @@ const Arrow = () => (
             style={{ overflow: "visible" }}
         >
             <g id="Page-1" fill="none" strokeWidth="1" fillRule="evenodd">
-                {/* Main Path */}
                 <path
                     id="Path-1"
                     className="path"
@@ -53,7 +49,6 @@ const Arrow = () => (
                     d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"
                 />
 
-                {/* Dashed Path */}
                 <path
                     className="dashed"
                     stroke="#fdcc63"
@@ -63,7 +58,6 @@ const Arrow = () => (
                     d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"
                 />
 
-                {/* Arrowhead */}
                 <polyline
                     id="arrow"
                     points="0,-18 36,0 0,18 10,0"

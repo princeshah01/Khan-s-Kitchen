@@ -37,7 +37,7 @@ const Header = () => {
                 </Link>
       
                 <Link spy={true} smooth={true} to="/Contact">
-                    <li className="my-2 py-2 px-8 border-b border-[#fdcc63]  text-[#fff0e9]  hover:rounded">
+                    <li className="my-2 py-2  border-b border-[#fdcc63]  text-[#fff0e9]  hover:rounded">
                         Contact
                     </li>
                 </Link>
@@ -81,7 +81,7 @@ const Header = () => {
             </div>
 
             <button
-                className="block lg:hidden transition ease-in-out duration-700 mb-3 -mr-4"
+                className="block lg:hidden transition ease-in-out duration-700 mb-3 "
                 onClick={handleClick}
             >
                 {click ? (

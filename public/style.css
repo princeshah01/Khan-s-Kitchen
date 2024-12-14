@@ -23,16 +23,19 @@ body{
 #root{
     margin-left: 5rem;
     margin-right: 5rem;
-    /* overflow-x:hidden ; */
     
 }
 @media (max-width: 768px) { 
     #root {
         margin-left: 2.5rem;
         margin-right: 1rem;
+      
     }
   }
 
+div{
+    padding: 0;
+}
 .navigation-bar {
     margin: 0.5rem 0rem;
     display: flex;
