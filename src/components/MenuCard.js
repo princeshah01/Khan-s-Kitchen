@@ -1,9 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom" ;
 import StarRating from "./Rating.js";
+import image from "../image/image.png";
 const FoodCard = (props) => {
   const {food } = props ;
-  const {name , image , price , avgRating , reviewCount}  = food ;
+  const {name , image2 , price , avgRating , reviewCount}  = food ;
   return (
     <div  className="hover:scale-105 transition transform ease-in-out duration-300 w-[15rem] h-[19rem]  shadow-2xl bg-white flex  relative rounded-[2rem]">
       <div className="w-44 h-44 rounded-full overflow-hidden  border-8 border-red-400 absolute -top-10 -right-10">

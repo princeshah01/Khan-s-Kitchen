@@ -6,8 +6,9 @@ import HeroCard from "./components/Hero-card";
 import BestDelivered from "./components/BestDelivered";
 import RegularMenu from "./components/RegularMenu";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu.js";
 // Pages
-const Menu = () => <div>Menu Page</div>;
+// const Menu = () => <div>Menu Page</div>;
 const Gallery = () => <div>Gallery Page</div>;
 const About = () => <div>About Page</div>;
 
