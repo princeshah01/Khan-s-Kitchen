@@ -1,136 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --font-normal:#908e91; 
-    --background-color:#fff0e9 ;
-    --font-red:#ea5858 ;
-    --color-yellow:#fdcc63 ;
-    --font-normalDark:#3c3835 ;
+:root {
+    --font-normal: #908e91;
+    --background-color: #fff0e9;
+    --font-red: #ea5858;
+    --color-yellow: #fdcc63;
+    --font-normalDark: #3c3835;
 }
-*{
-    padding: 0%;
-    margin: 0%;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-transform: capitalize;
-
-
 }
-body{
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
     background-color: var(--background-color);
+    font-family: "Josefin Sans", sans-serif;
+}
 
+#root {
+    padding: 0 5rem; 
+    max-width: 100%; 
 }
-#root{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    
-}
+
 @media (max-width: 768px) { 
     #root {
-        margin-left: 2.5rem;
-        margin-right: 1rem;
-      
+        padding: 0 1rem;
     }
-  }
-
-div{
-    padding: 0;
 }
+
+/* Navigation Bar */
 .navigation-bar {
-    margin: 0.5rem 0rem;
+    margin: 0.5rem 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-#logo-text{
-    color:var(--font-normalDark);
-    margin-top: 24px ;
-}
-.logo{
-    gap: 0.5rem;
+
+.logo {
     display: flex;
     align-items: center;
-    font-size: 24px;
+    gap: 0.5rem;
+    font-size: 1.5rem; 
     font-family: "Dancing Script", cursive;
 }
+
+#logo-text {
+    color: var(--font-normalDark);
+    margin-top: 1.5rem;
+}
+
 .links-nav > ul {
-    font-size: 24px;
     display: flex;
-    gap: 1.4rem;
+    gap: 1rem;
     list-style: none;
+    font-size: 1rem;
 }
-.links-nav > ul > li{
-    padding: 4px;
-}
-.links-nav > ul > li > a{
+
+.links-nav > ul > li > a {
     color: var(--font-normalDark);
     text-decoration: none;
 }
+
 .login-signup > ul {
-    display:flex ;
+    display: flex;
     list-style: none;
     gap: 0.8rem;
-    font-size: 24px;
+    font-size: 1rem;
 }
-.login-signup > ul > li > a {
-    color: var(--font-normalDark);
-    text-decoration: none; 
 
-}
-.login-signup , .links-nav {
-    margin-top: 2.5rem;
-    font-family: "Josefin Sans", sans-serif;
-
-
-}#signup-btn{
-    border: 2px solid #ea5858;
+#signup-btn {
+    border: 2px solid var(--font-red);
     border-radius: 30px;
+    padding: 0.5rem 1rem;
 }
+
 #signup-btn > a {
-    
     color: var(--font-red);
+    text-decoration: none;
 }
-.login-signup > ul > li {
-    padding: 2px 15px;
-    
-}
-#login-btn > a{
-    color: var(--font-red);
 
+#signup-btn:hover {
+    background-color: var(--font-red);
 }
-#signup-btn:hover{
-background-color: var(--font-red);
 
+#signup-btn:hover > a {
+    color: var(--background-color);
 }
-#signup-btn:hover > a{
-    color:var(--background-color);
+
+/* Animations */
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
 }
-.path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 3s linear forwards; animation-iteration-count: 1;animation-delay: 1s;}
+
 @keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
-.dashed{
-  stroke-dasharray: 5,12;
-  
+
+#arrow {
+    animation: arrow 2s linear forwards;
+    opacity: 0;
 }
-#arrow{animation: arrow 2s linear forwards; opacity:0;}
+
 @keyframes arrow {
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
-.ifrm{border:none; width:100%;margin-top:50px;}
 
-.hero-text{
+.dashed {
+    stroke-dasharray: 5, 12;
+}
+
+/* Hero Section */
+.hero-text {
     font-family: "Dancing Script", cursive;
-
 }
-.hero-para-text{
-    font-family: "Montserrat", sans-serif;
 
+.hero-para-text, h2 {
+    font-family: "Montserrat", sans-serif;
 }
-h2{
-    font-family: "Montserrat", sans-serif;
 
+.ifrm {
+    border: none;
+    width: 100%;
+    margin-top: 50px;
+}
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -60px 0 0 -60px;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
