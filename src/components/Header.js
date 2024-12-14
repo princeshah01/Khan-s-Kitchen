@@ -9,7 +9,7 @@ const Header = () => {
     const toggleMenu = () => setClick(!click);
 
     const renderMobileMenu = () => (
-        <div className="lg:hidden z-50 block p-2 font-semibold absolute w-50 top-[5.1rem] right-4 bg-[#3c3835] rounded-lg">
+        <div className="lg:hidden z-50 block p-2 font-semibold absolute w-50 top-[5.8rem] right-4 bg-[#3c3835] rounded-lg">
             <ul className="text-center text-sm px-8">
                 {["/", "/About", "/Menu", "/Gallary", "/Contact"].map((path, idx) => (
                     <Link key={idx} to={path}>
