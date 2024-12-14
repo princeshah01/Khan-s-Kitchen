@@ -9,7 +9,7 @@ const Header = () => {
     const toggleMenu = () => setClick(!click);
 
     const renderMobileMenu = () => (
-        <div className="lg:hidden z-50 block p-2 font-semibold absolute w-50 top-[5.8rem] right-4 bg-[#3c3835] rounded-lg">
+        <div className="lg:hidden z-50 block p-2 font-semibold absolute w-50 top-11 -right-4 bg-[#3c3835] rounded-lg">
             <ul className="text-center text-sm px-8">
                 {["/", "/About", "/Menu", "/Gallary", "/Contact"].map((path, idx) => (
                     <Link key={idx} to={path}>
@@ -37,7 +37,7 @@ const Header = () => {
                 <span className="font-extrabold hidden lg:block ml-2 logo mt-3">Khan's Kitchen</span>
             </div>
 
-            <div className="hidden lg:flex gap-8 text-lg">
+            <div className="hidden lg:flex gap-8 text-2xl">
                 {["Home", "Menu", "Gallery", "About", "Contact"].map((item, idx) => (
                     <Link
                         key={idx}
@@ -50,16 +50,16 @@ const Header = () => {
                 ))}
             </div>
 
-            <div className="hidden lg:flex gap-4 login-signup">
-                <a href="#" className=" text-lg font-semibold text-[#ea5858]">
+            <div className="hidden lg:flex gap-4 login-signup justify-center items-center">
+                <a href="#" className=" text-2xl font-semibold text-[#ea5858]">
                     Login
                 </a>
-                <a href="#" className=" font-semibold text-lg text-[#ea5858] border border-[2px] px-2 border-[#ea5858] rounded-lg hover:bg-[#ea5858] hover:text-[#fff0e9]">
+                <a href="#" className=" font-semibold text-2xl text-[#ea5858] border border-[2px] px-4 py-1 border-[#ea5858] rounded-full hover:bg-[#ea5858] hover:text-[#fff0e9]">
                     Signup
                 </a>
             </div>
-
-            <div className="lg:hidden">
+                
+            <div className="lg:hidden relative">
                 {click && renderMobileMenu()}
                 <button
                     onClick={toggleMenu}
