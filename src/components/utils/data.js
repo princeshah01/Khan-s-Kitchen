@@ -1,4 +1,4 @@
-const foodItems = [
+export const foodData = [
     {
       name: "Egg Roll",
       image: "https://img.freepik.com/free-photo/egg-roll-fried-spring-rolls-white-plate-thai-food_1150-21492.jpg?t=st=1734081446~exp=1734085046~hmac=0f0e1b8f1100f131600b84aca33fa14fd44e2fc575e197eebf69da1cf702e0d3&w=900",
@@ -17,7 +17,7 @@ const foodItems = [
       name: "Chicken 65",
       image: "https://img.freepik.com/free-photo/side-view-stewed-meatballs-with-tomato-sauce-bell-pepper-spring-onion-mint-plate_141793-5117.jpg?t=st=1734081346~exp=1734084946~hmac=b9ba4d6fc08eb05469df54044d727099ab0792d749c92f8dc0c25e36c4642569&w=900",
       price: 225,
-      avgRating: 4,
+      avgRating: 5,
       reviewCount: 112,
     },
     {
@@ -43,4 +43,3 @@ const foodItems = [
     },
   ];
   
-export default foodItems ;  

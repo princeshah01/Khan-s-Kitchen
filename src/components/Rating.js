@@ -1,16 +1,13 @@
-import React from "react";
-
-const StarRating = ({ rating, totalStars = 5 }) => (
-  <div className="flex gap-1">
-    {[...Array(totalStars)].map((a, index) => (
-      <span
-        key={index}
-        className={`text-2xl ${index < rating ? "text-[#fdcc63]" : "text-gray-400"} opacity-70`}
-      >
-        ★
-      </span>
-    ))}
-  </div>
-);
+const StarRating = ({ rating , totalRating = 5 }) => {
+  const stars = [];
+  for (let j = 1; j <= totalRating; j++) {
+    if (j <= rating) {
+      stars.push(<span key={j} className="text-2xl text-[#fdcc63]">★</span>);
+    } else {
+      stars.push(<span key={j} className="text-2xl text-gray-400 opacity-70">★</span>);
+    }
+  }
+  return <div>{stars}</div>;
+};
 
 export default StarRating;
