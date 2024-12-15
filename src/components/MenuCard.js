@@ -2,6 +2,9 @@ import React from "react";
 import {Link} from "react-router-dom" ;
 import StarRating from "./Rating.js";
 import image from "../image/image.png";
+
+
+
 const FoodCard = (props) => {
   const {food } = props ;
   const {name , image2 , price , avgRating , reviewCount}  = food ;
