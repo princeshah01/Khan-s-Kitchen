@@ -32,23 +32,19 @@ const Menu = () => {
   };
 
 
-  if (originalMenu.length === 0) {
 
-    return (
-      <div>
-        <SearchBar 
-               setMainMenu={setMainMenu}
-               handleSearch={handleSearch}
-               setQuery={setQuery}
-               query={query}
-        />
 
-        <Simmer />
-      </div>
-    )
-  }
+  return originalMenu.length === 0 ?      
+  <div>
+  <SearchBar 
+         setMainMenu={setMainMenu}
+         handleSearch={handleSearch}
+         setQuery={setQuery}
+         query={query}
+  />
 
-  return (
+  <Simmer />
+</div> : (
     <div className='flex flex-col gap-4 w-full'>
 
       <SearchBar setMainMenu={setMainMenu}
