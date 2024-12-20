@@ -1,0 +1,28 @@
+.App{
+    margin: 0 5rem 10rem 5rem;
+
+}
+img{
+    width: 100%;
+    display: block;
+    padding: 5px 0px;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+.lg-react-element{
+    column-count: 3;
+    column-gap: 10px;
+}
+img:hover {
+    filter: opacity(.9);
+    transform:scale(1.02);
+}
+@media (max-width: 768px){
+    .lg-react-element{
+        column-count: 1;
+        column-gap: 10px;
+    }
+    .App{
+        margin: 2rem;
+    }
+}

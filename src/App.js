@@ -7,23 +7,27 @@ import RegularMenu from "./components/RegularMenu";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu.js";
 import { createBrowserRouter ,RouterProvider} from "react-router-dom";
+import  ErrorPage  from "./components/ErrorPage.js";
+import Gallery from "./components/Gallery.js";
 // Pages
 // const Menu = () => <div>Menu Page</div>;
-const Gallery = () => <div>Gallery Page</div>;
 const About = () => <div>About Page</div>;
 
 const BrowserRout = createBrowserRouter([
   {
     path: "/",
     element: (<>
-      <Header />
+    <Header/>
       <Hero />
       <HeroCard />
       <BestDelivered />
       <RegularMenu />
-      <Footer />
+      <Footer/>
     </>
 ),
+errorElement:(
+  <ErrorPage/>
+) ,
 },
 {
   path:"/menu",
@@ -51,11 +55,21 @@ element:(<>
   <Footer />
   </>),
 }
+,{
+  path:"/Contact",
+  element:(<>
+  <Header/>
+  <About/>
+  <Footer />
+  </>),
+},
 
 ])
 
 const App = () => (
- < RouterProvider router={BrowserRout}/>
+
+< RouterProvider router={BrowserRout}/>
+
 
   // <Router>
   //   <Header />
