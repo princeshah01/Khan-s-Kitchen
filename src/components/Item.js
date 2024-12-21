@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { foodDataMain } from './utils/data';
-import Simmer from "./Simmer";
+import SimmerItem from "./ItemSimmer.js";
 import Rating from "./Rating.js";
 import BottomCard from "./BottomCard.js";
+import {Link} from "react-router-dom" ;
 
 const Item = () => {
   const { itemId } = useParams();
@@ -29,11 +30,11 @@ const Item = () => {
     fetchData();
   }, [itemId]);
 
-  if (!dataFood) return <Simmer />;
+  if (!dataFood) return <SimmerItem className="w-[100vw]" />;
 
   return (
     <div className="item w-[100%] flex justify-center items-center">
-      <div className="w-[80%] bg-white rounded-2xl">
+      <div className="w-full lg:w-[80%] bg-white rounded-2xl">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2">
             <img className="w-full p-3 rounded-3xl" src={dataFood.image} alt="Food" />
@@ -73,11 +74,11 @@ const Item = () => {
         </div>
           <h3 className='text-left pl-3 text-xl py-4 text-red-500'>Similar Products</h3>
       { (downData.length > 1)?  ( <div className="flex  overflow-x-auto">
-          {downData.map((f) => { return ( (f.id != itemId)) ? <BottomCard key={f?.id} food={f} /> : "" }
+          {downData.map((f) => { return ( (f.id != itemId)) ? <Link to={"/item/"+f?.id}><BottomCard key={f?.id} food={f} /></Link> : "" }
           )} 
         
         </div>
-          )  : <p className='ml-3 text-xl capitalize '>nothing to show...😔 </p> }
+          )  : <p className='ml-3 text-xl capitalize mb-4 '>nothing to show...😔 </p> }
 
         
           

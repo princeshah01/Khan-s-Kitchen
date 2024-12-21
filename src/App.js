@@ -66,7 +66,8 @@ const BrowserRoute = createBrowserRouter([
 
 const App =() =>{
   return (
-   < RouterProvider router={BrowserRoute}/>
+   <RouterProvider  router={BrowserRoute}/>
+   
   )
 }
 

@@ -35,7 +35,7 @@ function Footer() {
                     <ul className='flex flex-col gap-2 '>
                         <Link to="/" className='hover:underline'>Home</Link>
                         <Link to="/menu" className='hover:underline'>Menu</Link>
-                        <Link to="/gallary" className='hover:underline'>Gallary</Link>
+                        <Link to="/Gallery" className='hover:underline'>Gallery</Link>
                         <Link to="/contact" className='hover:underline'>Contacts</Link>
                     </ul>
                 </div>

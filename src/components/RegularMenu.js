@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Card from "./MenuCard";
-import {foodDataMain} from "./utils/data";
+import { foodDataMain } from "./utils/data";
 import { useEffect, useState } from "react";
 
 import Simmer from "./Simmer";
@@ -8,18 +8,18 @@ import Simmer from "./Simmer";
 
 
 const RegularMenu = () => {
-    const [DataFood , SetDataFood] = useState([]);
-    async function fetchData(){
-        const data = await foodDataMain() ;
+    const [DataFood, SetDataFood] = useState([]);
+    async function fetchData() {
+        const data = await foodDataMain();
         SetDataFood(data);
 
     }
-        
-        useEffect(()=>{
-            fetchData();
-        },[])
-        console.log(DataFood);
-      
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+    console.log(DataFood);
+
     return (
         <div className="ml-6 mt-24">
             <div className="flex items-center gap-3 lg:justify-between flex-col lg:flex-row mb-10 " >
@@ -31,10 +31,19 @@ const RegularMenu = () => {
                     <Link to={"/menu"} className="bg-[#ea5858]  py-2 px-4 rounded-lg border-[#ea5858] "><span className="text-[#fff0e9]">See all</span></Link>
                 </div>
             </div>
-            <div className="w-[80%] mb-32  md:ml-16 lg:ml-28 place-items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-20">
-                {DataFood.length === 0 ? <Simmer/> :
-                DataFood.map((food,index) => {if(index < 6) return <Link to={"/item/"+food.id} key={food.id}><Card  food={food} /></Link>})}
-            </div>
+            {
+                (DataFood.length === 0) ? <Simmer /> : (
+                    <div className="w-[80%] mb-32  md:ml-16 lg:ml-28 place-items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-20">
+                        {DataFood.map((food, index) => {
+                            return (
+                                index < 6 ? <Link to={"/item/" + food.id} key={food.id}><Card food={food} /></Link> : null
+
+                            )
+                        }
+                        )
+                        }
+                    </div>)
+            }
         </div>
     )
 }
