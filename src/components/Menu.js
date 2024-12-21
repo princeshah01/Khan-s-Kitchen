@@ -3,6 +3,7 @@ import Simmer from './Simmer';
 import SearchBar from './SearchBar';
 import { foodDataMain } from './utils/data';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Menu = () => {
@@ -55,9 +56,9 @@ const Menu = () => {
 
       <div className='w-[80%] place-items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mx-8 my-16 md:mx-16 lg:mx-32'>
         {MainMenu?.length > 0 ? (
-          MainMenu.map((data, index) => (
-            <Card key={index} food={data} />
-          ))
+          MainMenu.map((data, index) =>{ return <Link key={data.id} to={"/item/"+data.id}> <Card food={data} /></Link> }
+          
+          )
         ) : (
           <div className='col-span-full grid place-items-center h-40'>
 

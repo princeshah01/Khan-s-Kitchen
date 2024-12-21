@@ -1,15 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom" ;
 import StarRating from "./Rating.js";
 import image from "../image/image.png";
 
 
 
-const FoodCard = (props) => {
-  const {food } = props ;
+const FoodCard = ({food}) => {
   const {name , image2 , price , avgRating , reviewCount}  = food ;
   return (
-    <div  className="hover:scale-105 transition transform ease-in-out duration-300 w-[15rem] h-[19rem]  shadow-2xl bg-white flex  relative rounded-[2rem]">
+    <div  className="hover:scale-105 transition transform ease-in-out duration-300 w-[15rem] h-[19rem]  shadow-2xl bg-[#fff] flex  relative rounded-[2rem]">
       <div className="w-44 h-44 rounded-full overflow-hidden  border-8 border-red-400 absolute -top-10 -right-10">
         <img className="w-full object-center" src={image} alt="food-image"  loading="lazy"/>
       </div>
@@ -20,7 +18,7 @@ const FoodCard = (props) => {
           </div>
           <div className="flex justify-between ">
             <div className="price font-bold text-xl ml-2 text-nowrap"><span className="text-lg">Rs</span> {price}</div>
-            <Link className="bg-[#ea5858] items-center text-nowrap flex py-2 px-4 rounded-3xl">Buy Now</Link>
+            <button className="bg-[#ea5858] items-center text-nowrap flex py-2 px-4 rounded-3xl">Buy Now</button>
           </div>
       </div>
     </div>

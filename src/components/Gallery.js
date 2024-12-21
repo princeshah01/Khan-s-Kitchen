@@ -105,7 +105,7 @@ const Gallery = () => {
     return (
         <div className="App" >
             <div className='flex flex-col items-center gap-5 mb-10'>
-            <h1 className='text-center text-5xl text-[#3c3835]'>gallery</h1>
+            <h1 className='text-center text-5xl text-[#3c3835] font-semibold tracking-wider'>gallery</h1>
             <p className='text-center opacity-80  lg:w-[50%]'>Even though pictures don't do justice to the property (and vice-versa), here are some glimpses of Khan's kitchen we have captured over time. </p>
 
             </div>

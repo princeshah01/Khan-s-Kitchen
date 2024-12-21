@@ -55,7 +55,7 @@ const Header = () => {
             </div>
 
             <div className="hidden lg:flex gap-4 login-signup justify-center items-center">
-                <a onClick={handlelogin}  className=" px-4 text-2xl font-semibold text-[#ea5858]">
+                <a onClick={handlelogin}  className="cursor-pointer px-4 text-2xl font-semibold text-[#ea5858]">
                     {btnName}
                 </a>
                 <a href="#" className=" font-semibold text-2xl text-[#ea5858] border border-[2px] px-4 py-1 border-[#ea5858] rounded-full hover:bg-[#ea5858] hover:text-[#fff0e9]">
