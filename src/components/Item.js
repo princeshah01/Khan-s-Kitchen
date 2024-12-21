@@ -74,7 +74,7 @@ const Item = () => {
         </div>
           <h3 className='text-left pl-3 text-xl py-4 text-red-500'>Similar Products</h3>
       { (downData.length > 1)?  ( <div className="flex  overflow-x-auto">
-          {downData.map((f) => { return ( (f.id != itemId)) ? <Link to={"/item/"+f?.id}><BottomCard key={f?.id} food={f} /></Link> : "" }
+          {downData.map((f) => { return ( (f.id != itemId)) ? <Link to={"/item/"+f?.id} key={f?.id}><BottomCard  food={f} /></Link> : "" }
           )} 
         
         </div>

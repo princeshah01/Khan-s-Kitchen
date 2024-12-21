@@ -108,7 +108,7 @@ const Hero = () => {
             <div className="middle  -rotate-6 mt-6 hidden lg:block">
                 <Arrow />
             </div>
-            <div className="right-hero w-[120%] lg:w-1/3 mt-12 md:mt-8  ">
+            <div className="right-hero  lg:w-1/3 ml-10 mt-12 md:mt-8  ">
                 <img className="w-[80%] hover:scale-105 transition ease-in-out duration-300 hover:-rotate-3 lg:mt-16 md:ml-10" src={HeroImg} alt="" />
             </div>
 

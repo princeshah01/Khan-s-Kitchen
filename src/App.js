@@ -10,12 +10,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage.js";
 import Gallery from "./components/Gallery.js";
 import Item from "./components/Item.js";
+import ScrollToTop from "./components/Scroll.js";
 const About = () => <div>About Page</div>;
 const Contact = () => <div>Contact Page</div>;
 
 const AppToRender = () => (
   <>
     <Header />
+  <ScrollToTop/>
     <Outlet />
     <Footer />
   </>
