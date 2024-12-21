@@ -16,7 +16,7 @@ const Header = () => {
         <div className="lg:hidden z-50 block p-2 font-semibold absolute w-50 top-11 -right-4 bg-[#3c3835] rounded-lg">
             <ul className="text-center text-sm px-8">
                 {["/", "/About", "/Menu", "/Gallery", "/Contact"].map((path, idx) => (
-                    <Link key={idx} to={path}>
+                    <Link key={idx} to={path} onClick={toggleMenu}>
                         <li className="my-2 py-2 border-b border-[#fdcc63] text-[#fff0e9] hover:rounded">
                             {path.replace("/", "") || "Home"}
                         </li>
@@ -43,7 +43,7 @@ const Header = () => {
 
             <div className="hidden lg:flex gap-8 text-2xl">
                 {["Home", "Menu", "Gallery", "About", "Contact"].map((item, idx) => (
-                    <Link
+                    <Link 
                         key={idx}
                         to={`/${item === "Home" ? "" : item}`}
                         className="hover:underline underline-offset-8 transition duration-300 ease-in-out decoration-[#ea5858]"
