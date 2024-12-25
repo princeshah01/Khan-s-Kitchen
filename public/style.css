@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
     --font-normal: #908e91;
@@ -170,3 +169,26 @@ body, html {
     transform: translate(-50% , -50%);
     color: var(--font-normalDark);
 }
+.about-text{
+    font-family: "Open Sans", serif;
+
+}
+
+/* Customize the scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 2px;  
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Set the background of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;  /* Set the color of the scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Change color of the thumb when hovered */
+  }
+  

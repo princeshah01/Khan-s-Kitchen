@@ -11,7 +11,9 @@ import ErrorPage from "./components/ErrorPage.js";
 import Gallery from "./components/Gallery.js";
 import Item from "./components/Item.js";
 import ScrollToTop from "./components/Scroll.js";
-const About = () => <div>About Page</div>;
+import About from "./components/about/About" ;
+
+// const About = () => <div>About Page</div>;
 const Contact = () => <div>Contact Page</div>;
 
 const AppToRender = () => (

@@ -33,7 +33,7 @@ const RegularMenu = () => {
             </div>
             {
                 (DataFood.length === 0) ? <Simmer /> : (
-                    <div className="w-[80%] mb-32  md:ml-16 lg:ml-28 place-items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-20">
+                    <div className="w-[80%] mb-32 ml-8 md:ml-16 lg:ml-28 place-items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-20">
                         {DataFood.map((food, index) => {
                             return (
                                 index < 6 ? <Link to={"/item/"+food.id} key={food.id}><Card food={food} /></Link> : null
